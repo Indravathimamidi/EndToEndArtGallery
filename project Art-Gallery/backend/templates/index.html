@@ -1,0 +1,65 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href={% static 'style.css'%}>
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v3.0.6/css/line.css">
+    <script src={% static 'main.js'%} defer></script>
+</head>
+<body>
+    <body>
+        {% include "header.html" %}
+      
+        <!-- Main -->
+        <main class="main">
+          <!-- Home -->
+          <section class="home section" id="home">
+            <div class="home_container container grid">
+              <div class="home_content grid">
+                <div class="home_social">
+                  <a href="https://www.instagram.com/p_arts_crafts/" class="home_social-icon" target="_blank" aria-label="Visit our Instagram profile">
+                    <i class="uil uil-instagram" aria-hidden="true"></i>
+                  </a>
+                  <a href="https://wa.me/916300634488?text=Hello!!just viewed your gallery, can i have more information??" class="home_social-icon" target="_blank" aria-label="Chat with us on WhatsApp">
+                    <i class="uil uil-whatsapp" aria-hidden="true"></i>
+                  </a>
+                  <a href="https://mail.google.com/mail/?view=cm&fs=1&to=P.crafts.arts@gmail.com&su=Inquiry&body=Success" class="home_social-icon" target="_blank" aria-label="Send us an email">
+                    <i class="uil uil-envelope" aria-hidden="true"></i>
+                </a>
+                
+                </div>
+      
+                <div class="home_img">
+                  <svg class="home_blob" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" data-tilt="" style="will-change: transform; transform: perspective(300px) rotateX(0deg) rotateY(0deg);">
+                    <mask id="mask0" mask-type="alpha">
+                      <!-- Define a circle shape -->
+                      <circle cx="100" cy="100" r="100" fill="white" />
+                    </mask>
+                    <g mask="url(#mask0)">
+                      <!-- Use the same circle path or update accordingly -->
+                      <circle cx="100" cy="100" r="100" fill="var(--first-color)" />
+                      <!-- Image inside the circle -->
+                      <image class="home_blob-img" x="50" y="50" width="100" height="100" xlink:href={% static 'assets/arts/Homelogo.jpg'%} />
+                    </g>
+                  </svg>
+                  
+                </div>
+      
+                <div class="home_data">
+                  <h1 class="home_title">Hi, I'm Prathyusha</h1>
+                  <h3 class="home_subtitle">I am <span class="type">an Artist</span><span class="typed-cursor typed-cursor--blink" aria-hidden="true">|</span> !!</h3>
+      
+                  <p class="home_description">
+                    "Where walls have ears and paintings have stories—step into our quirky gallery!"
+                  </p>
+                  <a href={% url 'explore'%} class="button button--flex">
+                    Explore our Gallery
+                  </a>
+                </div>
+              </div>      
+      </body>
+</body>
+</html>

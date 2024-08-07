@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arts and Crafts</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link rel="stylesheet" href="{% static 'main.css' %}">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v3.0.6/css/line.css">
+    <script src="{% static 'main.js' %}" defer></script>
+</head>
+<body>
+    <!-- Header -->
+    {% include "header.html" %}
+
+    <!-- Main -->
+    <main class="main display-products">
+        <section class="products">
+            <h1 class="section_title">Arts and Crafts</h1>
+            <div class="products_container">
+                <!-- Example of dynamically generated product boxes -->
+                {% for item in items %}
+                <div class="product_box">
+                    <img src="{{ item.image.url }}" alt="{{ item.title }}" class="product_image">
+                    <h2 class="product_title">{{ item.title }}</h2>
+                    <p class="product_description">{{ item.description }}</p>
+                    <p class="product_price">${{ item.price }}</p>
+                    <button class="button button--flex">Add to Cart</button>
+                </div>
+                {% endfor %}
+            </div>
+        </section>
+    </main>
+</body>
+</html>

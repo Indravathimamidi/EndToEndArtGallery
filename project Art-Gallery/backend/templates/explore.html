@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore Our Gallery</title>
+    <link rel="stylesheet" href="{% static 'main.css' %}">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v3.0.6/css/line.css">
+    <script src="{% static 'main.js' %}" defer></script>
+</head>
+<body>
+    <!-- Header -->
+    {% include "header.html" %}
+
+    <!-- Explore Section -->
+    <main class="explore">
+        <section class="explore_section">
+            <div class="content_left">
+                <h2>Arts</h2>
+                <p>Explore various art styles and genres. Discover classic paintings, modern art, and everything in between. Each piece tells its own unique story and offers a glimpse into the artist's vision.</p>
+            </div>
+            <div class="section_center">
+                <a href={% url 'arts'%} class="section_link">Arts</a>
+                <a href={% url 'crafts'%} class="section_link">Crafts</a>
+            </div>
+            <div class="content_right">
+                <h2>Crafts</h2>
+                <p>Delve into the world of crafts, from handmade sculptures to intricate designs. Our collection showcases the craftsmanship and creativity behind each piece, offering a diverse range of materials and techniques.</p>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
