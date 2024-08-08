@@ -1,0 +1,100 @@
+/* Base styles for the product section */
+.product {
+    padding: var(--mb-2) 0;
+    background-color: var(--container-color); /* Background color for the section */
+}
+
+.product_container {
+    display: flex;
+    flex-direction: row;
+    gap: var(--mb-2);
+    align-items: center;
+    max-width: 1200px; /* Optional: Adjust for your design */
+    margin: 0 auto; /* Center the container */
+    padding: var(--mb-2);
+}
+
+.product_image img {
+    width: 100%;
+    height: auto;
+    border-radius: var(--mb-0-5);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Slightly increased shadow for better UI */
+    object-fit: cover; /* Ensure images cover their container without distortion */
+}
+
+.product_details {
+    display: flex;
+    flex-direction: column;
+    gap: var(--mb-1);
+    max-width: 500px; /* Optional: Limit width for better layout */
+}
+
+.product_title {
+    font-size: var(--h2-font-size);
+    color: var(--title-color);
+    font-weight: var(--font-semi-bold);
+    margin-bottom: var(--mb-0-5);
+}
+
+.product_price {
+    font-size: var(--big-font-size);
+    color: var(--first-color);
+    font-weight: var(--font-semi-bold);
+    margin-bottom: var(--mb-1);
+}
+
+.product_description {
+    font-size: var(--normal-font-size);
+    color: var(--text-color-light); /* Lightened text color for better readability */
+    margin-bottom: var(--mb-2);
+}
+
+.button {
+    display: inline-block;
+    background-color: var(--first-color);
+    color: #fff;
+    padding: var(--mb-1) var(--mb-2);
+    border-radius: var(--mb-0-5);
+    font-weight: var(--font-medium);
+    font-family: inherit;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s; /* Added transform for hover effect */
+}
+
+.button:hover {
+    background-color: var(--first-color-alt);
+    transform: scale(1.05); /* Slightly enlarge button on hover */
+}
+
+/* Responsive Design */
+@media screen and (max-width: 767px) {
+    .product_container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .product_image img {
+        width: 100%;
+        height: auto;
+        border-radius: var(--mb-1); /* Slightly increased border radius for a more rounded look */
+    }
+    
+    .product_title {
+        font-size: var(--h3-font-size);
+    }
+
+    .product_price {
+        font-size: var(--h3-font-size);
+    }
+    
+    .product_description {
+        font-size: var(--small-font-size);
+    }
+
+    .button {
+        padding: var(--mb-0-75) var(--mb-1);
+        font-size: var(--small-font-size);
+        border-radius: var(--mb-0-5);
+    }
+}

@@ -26,6 +26,7 @@
                     <h2 class="product_title">{{ item.title }}</h2>
                     <p class="product_description">{{ item.description }}</p>
                     <p class="product_price">${{ item.price }}</p>
+                    <a href="{% url 'productView' item.id %}" class="button button--flex">View Product</a>
                     <button class="button button--flex">Add to Cart</button>
                 </div>
                 {% endfor %}

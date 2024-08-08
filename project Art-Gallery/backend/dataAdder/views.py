@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 
 # Create your views here.
 # myapp/views.py
@@ -37,3 +37,7 @@ def crafts(request):
     # Filter images by category 'crafts'
     crafts_images = Image.objects.filter(category='craft')
     return render(request, 'products.html', {'items': crafts_images})
+
+def productView(request, id):
+    product = get_object_or_404(Image, id=id)
+    return render(request, 'productView.html', {'product': product})
