@@ -1,9 +1,10 @@
 # myapp/forms.py
 
 from django import forms
-from .models import Image
+from .models import Product
 
-class ImageForm(forms.ModelForm):
+class ProductForm(forms.ModelForm):
     class Meta:
-        model = Image
+        model = Product
         fields = ['title', 'description', 'image', 'price', 'category']
+

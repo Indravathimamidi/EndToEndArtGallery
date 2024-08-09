@@ -1,0 +1,22 @@
+<!-- myapp/templates/Product_list.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Product List</title>
+</head>
+<body>
+    <h2>Product List</h2>
+    <ul>
+        {% for Product in Products %}
+        <li>
+            <h3>{{ Product.title }}</h3>
+            <p>{{ Product.description }}</p>
+            <p>{{ Product.price }}</p>
+            <img src="{{ Product.image.url }}" alt="{{ Product.title }}" width="200"/>
+            <p>{{ Product.category }}</p>
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

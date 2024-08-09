@@ -24,7 +24,7 @@
                     <p class="product_description">
                         {{product.description}}
                     </p>
-                    <button class="button add-to-cart">Add to Cart</button>
+                    <a href="{% url 'addToCart' product.id %}" class="button button--flex">Add to Cart</a>
                 </div>
             </div>
         </section>
